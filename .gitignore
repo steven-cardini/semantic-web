@@ -1,0 +1,29 @@
+*.class
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# Eclipse
+.project
+.metadata
+bin/
+tmp/
+.settings/
+.loadpath
+.classpath
+
+# Maven
+log/
+target/
+
+# General files to ignore
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.psd
+*.docx
+*.zip
+
