@@ -1,0 +1,44 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:anm="http://www.my-namespace.ch/animals#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rdfs:Class rdf:about="http://www.my-namespace.ch/animals#whale">
+    <anm:livesIn>
+      <anm:environment rdf:about="http://www.my-namespace.ch/animals#water"/>
+    </anm:livesIn>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.my-namespace.ch/animals#mammal"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.my-namespace.ch/animals#animal"/>
+  <rdfs:Class rdf:about="http://www.my-namespace.ch/animals#cat">
+    <anm:has>
+      <anm:feature rdf:about="http://www.my-namespace.ch/animals#fur"/>
+    </anm:has>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.my-namespace.ch/animals#mammal"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.my-namespace.ch/animals#bear">
+    <anm:has rdf:resource="http://www.my-namespace.ch/animals#fur"/>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.my-namespace.ch/animals#mammal"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.my-namespace.ch/animals#mammal">
+    <anm:has>
+      <anm:feature rdf:about="http://www.my-namespace.ch/animals#vertebra"/>
+    </anm:has>
+    <rdfs:subClassOf rdf:resource="http://www.my-namespace.ch/animals#animal"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.my-namespace.ch/animals#fish">
+    <anm:livesIn rdf:resource="http://www.my-namespace.ch/animals#water"/>
+    <rdfs:subClassOf rdf:resource="http://www.my-namespace.ch/animals#animal"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.my-namespace.ch/animals#feature"/>
+  <rdfs:Class rdf:about="http://www.my-namespace.ch/animals#environment"/>
+  <rdf:Property rdf:about="http://www.my-namespace.ch/animals#has"/>
+  <rdf:Property rdf:about="http://www.my-namespace.ch/animals#livesIn"/>
+</rdf:RDF>

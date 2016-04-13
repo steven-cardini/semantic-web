@@ -1,5 +1,10 @@
 package ch.cardini.steven.semantic_web;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.ontology.OntModelSpec;
@@ -58,6 +63,15 @@ public class AnimalModelGenerator {
     
     // print out the generated model
     model.write(System.out);
+    
+    try {
+      OutputStream out = new FileOutputStream("animals.xml");
+      model.write(out);
+    } catch (FileNotFoundException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+    
 
   }
   

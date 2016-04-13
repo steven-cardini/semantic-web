@@ -1,0 +1,41 @@
+@prefix anm:   <http://www.my-namespace.ch/animals#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+anm:fish  a              rdfs:Class ;
+        rdfs:subClassOf  anm:animal ;
+        anm:livesIn      anm:water .
+
+anm:has  a      rdf:Property .
+
+anm:whale  a             rdfs:Class ;
+        rdfs:subClassOf  anm:mammal ;
+        anm:livesIn      anm:water .
+
+anm:livesIn  a  rdf:Property .
+
+anm:feature  a  rdfs:Class .
+
+anm:vertebra  a  anm:feature .
+
+anm:mammal  a            rdfs:Class ;
+        rdfs:subClassOf  anm:animal ;
+        anm:has          anm:vertebra .
+
+anm:cat  a               rdfs:Class ;
+        rdfs:subClassOf  anm:mammal ;
+        anm:has          anm:fur .
+
+anm:bear  a              rdfs:Class ;
+        rdfs:subClassOf  anm:mammal ;
+        anm:has          anm:fur .
+
+anm:animal  a   rdfs:Class .
+
+anm:environment  a  rdfs:Class .
+
+anm:water  a    anm:environment .
+
+anm:fur  a      anm:feature .
